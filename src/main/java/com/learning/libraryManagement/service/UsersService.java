@@ -11,14 +11,15 @@ import java.util.List;
 public class UsersService {
     @Autowired
     UsersRepository usersRepository;
-    public List<Users> createMultipleUsers(List<Users> multipleUsers){
+
+    public List<Users> createUsers(List<Users> multipleUsers) {
         return usersRepository.saveAll(multipleUsers);
 
     }
-    public List<Users> getAllUsers(){
+
+    public List<Users> getAllUsers() {
         return usersRepository.findAll();
     }
-
 
 
 }

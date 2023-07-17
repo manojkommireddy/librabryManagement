@@ -12,14 +12,14 @@ public class UsersController {
     @Autowired
     UsersService usersService;
 
-    @PostMapping("/createMultipleStudents")
+    @PostMapping("/createUsers")
 
-    public List<Users> createMultipleUserList(@RequestBody List<Users> createMultiple) {
-        return usersService.createMultipleUsers(createMultiple);
+    public List<Users> createMultipleUserList(@RequestBody List<Users> userList) {
+        return usersService.createUsers(userList);
     }
 
-    @GetMapping("/getMultipleUsers")
-    public List<Users> getMultipleUserList() {
+    @GetMapping("/getallUsers")
+    public List<Users> getAllUsers() {
         return usersService.getAllUsers();
 
     }
