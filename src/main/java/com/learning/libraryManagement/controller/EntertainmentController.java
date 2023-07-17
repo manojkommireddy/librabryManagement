@@ -15,15 +15,15 @@ public class EntertainmentController {
     @Autowired
 
     EntertainmentService entertainmentService;
-    @PostMapping("/saveMultipleEntertainments")
-    public List<Entertainment> saveMultipleEntertainments(@RequestBody List<Entertainment> entertainment){
+    @PostMapping("/saveEntertainments")
+    public List<Entertainment> saveEntertainments(@RequestBody List<Entertainment> entertainmentList){
 
-        return entertainmentService.saveMultipleEntertainments(entertainment);
+        return entertainmentService.saveEntertainments(entertainmentList);
     }
-    @GetMapping("/getEntertainment")
-    public List<Entertainment> getEntertainment(){
+    @GetMapping("/getAllEntertainments")
+    public List<Entertainment> getAllEntertainments(){
 
-        return entertainmentService.getEntertainment();
+        return entertainmentService.getAllEntertainments();
     }
 
 }

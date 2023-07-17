@@ -12,13 +12,13 @@ public class EntertainmentService {
     @Autowired
     EntertainmentRepository entertainmentRepository;
 
-    public List<Entertainment> saveMultipleEntertainments(List<Entertainment> entertainment){
+    public List<Entertainment> saveEntertainments(List<Entertainment> entertainment){
 
         entertainmentRepository.saveAll(entertainment);
         return entertainment;
     }
 
-    public List<Entertainment> getEntertainment(){
+    public List<Entertainment> getAllEntertainments(){
 
         return entertainmentRepository.findAll( );
 
