@@ -1,4 +1,7 @@
 package com.learning.libraryManagement.repository;
 
-public interface StaffRepository {
+import com.learning.libraryManagement.model.Staff;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface StaffRepository extends JpaRepository<Staff, Long> {
 }
