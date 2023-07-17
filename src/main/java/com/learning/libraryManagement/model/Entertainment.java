@@ -10,7 +10,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Entertainment {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
