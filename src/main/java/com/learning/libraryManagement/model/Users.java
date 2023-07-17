@@ -22,5 +22,4 @@ public class Users {
     Date startDate;
     Date endDate;
     Boolean active;
-
 }
