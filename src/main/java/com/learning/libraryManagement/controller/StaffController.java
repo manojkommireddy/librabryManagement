@@ -12,18 +12,20 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 import java.util.List;
+
 @RestController
 public class StaffController {
-@Autowired
-StaffService staffService;
-@GetMapping("/getMultipleStaff")
-    public List<Staff> getMultipleStaffList() {
-        return staffService.getMultipleStaff();
+    @Autowired
+    StaffService staffService;
+
+    @GetMapping("/getALlStaffDetails")
+    public List<Staff> getAllStaffInfo() {
+        return staffService.getAllStaffDetails();
     }
 
-    @PostMapping("/saveMultipleStaff")
+    @PostMapping("/saveAllStaffDetails")
 
-    public List<Staff> saveMultipleStaffList(@RequestBody List<Staff> staffList) {
-        return staffService.saveMultipleStaff(staffList);
+    public List<Staff> saveAllStaffInfo(@RequestBody List<Staff> staffList) {
+        return staffService.saveAllStaffDetails(staffList);
     }
 }
