@@ -19,10 +19,15 @@ public class BooksController {
 
 
 
-    @PostMapping("/getAllBooks")
-    public List<Books> getBooks(@RequestBody List<Books> books){
-        return booksservice.getBooks(books);
+    @PostMapping("/saveMultipleBooks")
+    public List<Books> createBooks(@RequestBody List<Books> books){
+        return booksservice.createBooks(books);
     }
+    @GetMapping("/getAllBooks")
+    public List<Books> getBooks(){
+        return booksservice.getBooks();
+    }
+
 
 
 }
