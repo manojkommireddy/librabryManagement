@@ -14,13 +14,12 @@ import java.util.List;
 public class BooksService {
     @Autowired
     BooksRepository booksRepository;
-    public List<Books> createBooks(List<Books> books){
 
-       this.booksRepository.saveAll(books);
-
-return books;
-
+    public List<Books> createBooks(List<Books> books) {
+        this.booksRepository.saveAll(books);
+        return books;
     }
+
     public List<Books> getBooks() {
 
         return this.booksRepository.findAll();

@@ -17,17 +17,15 @@ public class BooksController {
     @Autowired
     BooksService booksservice;
 
-
-
     @PostMapping("/saveMultipleBooks")
-    public List<Books> createBooks(@RequestBody List<Books> books){
+    public List<Books> createBooks(@RequestBody List<Books> books) {
         return booksservice.createBooks(books);
     }
+
     @GetMapping("/getAllBooks")
-    public List<Books> getBooks(){
+    public List<Books> getBooks() {
         return booksservice.getBooks();
     }
-
 
 
 }
