@@ -13,10 +13,12 @@ import java.util.List;
 public class EntertainmentController {
     @Autowired
     EntertainmentService entertainmentService;
+
     @PostMapping("/saveEntertainments")
     public List<Entertainment> saveEntertainments(@RequestBody List<Entertainment> entertainmentList){
         return entertainmentService.saveEntertainments(entertainmentList);
     }
+
     @GetMapping("/getAllEntertainments")
     public List<Entertainment> getAllEntertainments(){
         return entertainmentService.getAllEntertainments();
