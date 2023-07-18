@@ -15,16 +15,16 @@ import java.util.List;
 @RestController
 public class BooksController {
     @Autowired
-    BooksService booksservice;
+    BooksService booksService;
 
     @PostMapping("/saveMultipleBooks")
     public List<Books> createBooks(@RequestBody List<Books> books) {
-        return booksservice.createBooks(books);
+        return booksService.createBooks(books);
     }
 
     @GetMapping("/getAllBooks")
     public List<Books> getBooks() {
-        return booksservice.getBooks();
+        return booksService.getBooks();
     }
 
 
