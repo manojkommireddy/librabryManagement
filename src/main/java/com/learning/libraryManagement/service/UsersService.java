@@ -17,4 +17,8 @@ public class UsersService {
     public List<Users> getAllUsers() {
         return usersRepository.findAll();
     }
+
+    public void deleteByUsersId(Long id){
+         usersRepository.deleteById(id);
+    }
 }
