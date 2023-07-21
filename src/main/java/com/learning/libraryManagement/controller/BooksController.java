@@ -1,4 +1,31 @@
 package com.learning.libraryManagement.controller;
 
+
+import com.learning.libraryManagement.model.Books;
+import com.learning.libraryManagement.service.BooksService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
+@RestController
 public class BooksController {
+    @Autowired
+    BooksService booksService;
+
+    @PostMapping("/saveMultipleBooks")
+    public List<Books> createBooks(@RequestBody List<Books> books) {
+        return booksService.createBooks(books);
+    }
+
+    @GetMapping("/getAllBooks")
+    public List<Books> getBooks() {
+        return booksService.getBooks();
+    }
+
+
 }
